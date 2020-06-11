@@ -1,5 +1,5 @@
 export default {
-  counter: 0,
+  counter: 2,
   randomNumber: 0,
   todos: []
 }

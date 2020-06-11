@@ -1,6 +1,5 @@
 import { gql } from 'apollo-boost';
-import { CounterMutation } from '../Mutations/counterMutation';
-import TodoMutations from '../Mutations/todosMutation';
+import { CounterMutation } from '../../graphql/Counter/mutations';
 
 export const typeDefs = gql`
   extend type Query {
@@ -11,6 +10,5 @@ export const typeDefs = gql`
 export const resolvers = {
   Mutation: {
     ...CounterMutation,
-    ...TodoMutations,
   }
 };

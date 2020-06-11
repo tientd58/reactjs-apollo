@@ -2,8 +2,8 @@ import React from 'react'
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 import './styles.css'
-import { GET_COUNTER } from '../../apollo/queries/counterQueries';
-import { UPDATE_COUNTER } from '../../apollo/mutations/counterMutation';
+import { GET_COUNTER } from '../../graphql/Counter/queries';
+import { UPDATE_COUNTER } from '../../graphql/Counter/mutations';
 
 const Counter = () => {
   const { data } = useQuery(GET_COUNTER);
