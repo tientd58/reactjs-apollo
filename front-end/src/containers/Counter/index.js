@@ -1,9 +1,9 @@
 import React from 'react'
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
-import './styles.css'
-import { GET_COUNTER } from '../../graphql/Counter/queries';
-import { UPDATE_COUNTER } from '../../graphql/Counter/mutations';
+import './styles.scss'
+import { GET_COUNTER } from 'graphql/Counter/queries';
+import { UPDATE_COUNTER } from 'graphql/Counter/mutations';
 
 const Counter = () => {
   const { data } = useQuery(GET_COUNTER);
@@ -14,8 +14,8 @@ const Counter = () => {
     <div>
       <h1>Couter: {data.counter}</h1>
       <div className="controllers">
-        <button onClick={increment}>Add</button>
-        <button onClick={decrement}>Remove</button>
+        <button type="button" class="btn btn-primary" onClick={increment}>Add</button>
+        <button type="button" class="btn btn-secondary" onClick={decrement}>Remove</button>
       </div>
     </div>
   )

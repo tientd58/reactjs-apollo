@@ -1,5 +1,5 @@
 import { gql } from 'apollo-boost';
-import { CounterMutation } from '../../graphql/Counter/mutations';
+import { CounterMutation } from 'graphql/Counter/mutations';
 
 export const typeDefs = gql`
   extend type Query {
