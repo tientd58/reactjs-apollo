@@ -1,19 +1,16 @@
 import React from 'react';
+import { ToastContainer } from "react-toastify";
 import { ApolloProvider } from '@apollo/react-hooks';
 
 import './styles/App.scss';
 import client from 'apollo/client';
-import Counter from 'containers/Counter';
+import RouterContainer from 'routers';
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      {/* <div className="App">
-        <header className="App-header">
-            Learn React
-        </header>
-      </div> */}
-      <Counter />
+      <RouterContainer />
+      <ToastContainer />
     </ApolloProvider>
   );
 }

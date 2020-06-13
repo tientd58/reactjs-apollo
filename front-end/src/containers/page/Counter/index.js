@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 import './styles.scss'
@@ -14,8 +15,11 @@ const Counter = () => {
     <div>
       <h1>Couter: {data.counter}</h1>
       <div className="controllers">
-        <button type="button" class="btn btn-primary" onClick={increment}>Add</button>
-        <button type="button" class="btn btn-secondary" onClick={decrement}>Remove</button>
+        <button type="button" className="btn btn-primary" onClick={increment}>Add</button>
+        <button type="button" className="btn btn-secondary" onClick={decrement}>Remove</button>
+        <Link to='/admin'>
+          <button type="button" className="btn btn-primary">Admin</button>
+        </Link>
       </div>
     </div>
   )
